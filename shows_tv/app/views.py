@@ -75,7 +75,8 @@ def edit(request):
         print("Vamos a actualizar")
         show.title = request.POST['title']
         show.network = request.POST['network']
-        show.desc = request.POST['desc']
+        show.desc = request.POST['release_date']
+        show.desc = request.POST['description']
         show.save()
         return redirect(f'/shows/{id_show}')
 
